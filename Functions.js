@@ -28,3 +28,22 @@ function LoginUser(userName){
 }
 
 console.log(LoginUser("Pratish"));
+
+
+function calculateCartPrice(...num1){//Rest operator
+    return num1;
+}
+
+console.log(calculateCartPrice(200,400,600));
+
+
+const user={
+    username:"Pratish",
+    age:21
+}
+
+function handleObject(anyObject){
+    console.log(`username is ${anyObject.username} and age is ${anyObject.age}`);
+}
+
+handleObject(user);
