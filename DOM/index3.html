@@ -18,5 +18,20 @@
     }
     addlangName("Java")
     addlangName("SQL")
+    addlangName("Python")
+
+    function addOptilanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptilanguage("ReactJs")
+
+    //Edit
+    const secondLang=document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="NextJs"
+    // const newLi=document.createElement('li')
+    // newLi.textContent="Nextjs"
+    // secondLang.replaceWith(newLi)
 </script>
 </html>
