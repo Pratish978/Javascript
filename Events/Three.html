@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Javascript</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+<script>
+    let intervalId; // Declare globally so both buttons can access it
+
+    const sayDate = function(str){
+        console.log(str, Date.now());
+    }
+
+    document.querySelector("#start").addEventListener('click', function(){
+        // Prevent multiple intervals from stacking if "Start" is clicked twice
+        if (!intervalId) {
+            intervalId = setInterval(sayDate, 1000, "hi");
+            console.log("STARTED");
+        }
+    });
+
+    document.querySelector("#stop").addEventListener('click', function(){
+        clearInterval(intervalId); // Stop the interval
+        intervalId = null;         // Reset the variable
+        console.log("STOPPED");
+    });
+</script>
+</body>
+</html>
